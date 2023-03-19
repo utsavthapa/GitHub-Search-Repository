@@ -3,6 +3,11 @@
 
 A web application for exploring Github through its unauthenticated APIs.
 
+## Installation
+
+- npm install
+- npm start
+
 
 ## Technologies Used
 
