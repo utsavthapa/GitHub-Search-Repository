@@ -1,11 +1,17 @@
 export interface SearchProps {
   searchItem: string;
   setSearchItem: React.Dispatch<React.SetStateAction<string>>;
+  setSortItem: React.Dispatch<React.SetStateAction<string>>;
+  sortByItem: string;
+  setSortByItem: React.Dispatch<React.SetStateAction<string>>;
 }
 
 export interface HeaderProps {
   searchItem: string;
   setSearchItem: React.Dispatch<React.SetStateAction<string>>;
+  setSortItem: React.Dispatch<React.SetStateAction<string>>;
+  sortByItem: string;
+  setSortByItem: React.Dispatch<React.SetStateAction<string>>;
 }
 
 export interface owner {

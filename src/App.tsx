@@ -16,7 +16,7 @@ function App() {
           <Route path="/detail/:user/:id" element={<DetailPage />} />
         </Routes>
       </Router>
-      <ReactQueryDevtools />
+      {/* <ReactQueryDevtools /> */}
     </QueryClientProvider>
   );
 }

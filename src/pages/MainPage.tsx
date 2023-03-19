@@ -5,19 +5,29 @@ import { Pagination } from "./components/modules";
 
 const MainPage = () => {
   const [searchItem, setSearchItem] = useState<string>("");
+  const [sortItem, setSortItem] = useState<string>("Stars");
+  const [sortByItem, setSortByItem] = useState<string>("asc");
   const [pageNumber, setPageNumber] = useState<string>("1");
 
   const cardPerPage = 15;
   const { data: repositoriesList, isLoading: isLoadingRepositoriesList } =
     GetRepositoriesList(
-      `?q=${searchItem}&page=${pageNumber}&per_page=${cardPerPage}&sort=stars&order=desc`
+      `?q=${searchItem}&page=${pageNumber}&per_page=${cardPerPage}&sort=${sortItem}&order=${sortByItem}`
     );
 
   console.log("repositoriesList?.data", repositoriesList?.data);
 
   return (
     <div>
-      <Header {...{ searchItem, setSearchItem }} />
+      <Header
+        {...{
+          searchItem,
+          setSearchItem,
+          setSortItem,
+          sortByItem,
+          setSortByItem,
+        }}
+      />
       {searchItem === "" ? (
         <div className="display-message">
           Start by entering a keyword or phrase related to Repository you are
