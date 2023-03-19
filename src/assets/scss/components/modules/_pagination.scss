@@ -1,0 +1,14 @@
+.pagination {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 30px 30px;
+    color: $white;
+    .pages {
+        button {
+            background-color: $primary-dark;
+            color: $white;
+        }
+    }
+}
